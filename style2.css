@@ -1,0 +1,236 @@
+/*>>>> ====== ABOUT ME ===== <<<< */
+
+html,
+body{
+   margin: 0;
+   padding: 0;
+   font-family: 'Nanum Gothic', sans-serif;
+  background-color: rgb(22, 8, 44);
+}
+
+.box{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo{
+    width: 65%;
+    border-radius: 97% 3% 100% 0% / 17% 80% 20% 83% ;
+    margin-left: 20%;
+}
+h1,p{
+    color: khaki;
+}
+p{
+    width: 80%;
+    margin-bottom: 5%
+}
+.skills{
+    background-color: rgb(194, 187, 130);
+    border-radius: 15px;
+    width: 80%;
+}
+.logos{
+    width: 15%;
+    transition: transform .4s;
+}
+.logos:hover{
+    transform: scale(1.5);
+}
+
+/*>>>> ====== PROJECTS ===== <<<< */
+
+
+/* ========================NAVBAR=================================== */
+.navbar{
+    position: relative;
+    z-index: 200;
+}
+.left-img{
+    width: 35%;
+    position: absolute;
+
+}
+.left-img-1{
+  top: 15%;
+  left:15%;
+  box-shadow: 0 15px 60px rgba(3, 3, 3, 0.596);
+  opacity: .7;
+  border-radius: 10px;
+}
+.left-img-2{
+  top: 35%;
+  left:25%;
+  box-shadow: 0 15px 60px rgba(3, 3, 3, 0.596);
+  opacity: .7;
+  border-radius: 10px;
+}
+.left-img-3{
+  top: 55%;
+  left:35%;
+  box-shadow: 0 15px 60px rgba(3, 3, 3, 0.596);
+  opacity: .7;
+  border-radius: 10px;
+}
+.navbar-navigation{
+    display: flex;
+}
+.navbar-navigation-left{
+    width: 50vw;
+    height: 100vh;
+    background-color: rgb(94, 51, 65);
+    position: fixed;
+    left: -50vw;
+    transition: left .8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation-right{
+    width: 50vw;
+    height: 100vh;
+    background-color: #1f1d1d;
+    position: fixed;
+    right: -50vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: right .8s cubic-bezier(1, 0, 0, 1);
+}
+.nav-list{
+
+}
+.nav-list-item{
+  list-style: none;
+
+}
+.nav-list-link{
+  font-size: 50px;
+  color: #be7ca2;
+  text-decoration: none;
+  display: block;
+  margin: 20px;
+  text-align: center;
+}
+.nav-list-link:hover{
+  color: #b4a068;
+  letter-spacing: 4px;
+}
+/* --------------------HAMBUERGUER--------------------------------- */
+.hamburger-menu{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top:10%;
+  right: 5%;
+  z-index: 300;
+  
+}
+.fullSpace{
+  width: 100%;
+    height: 100%;
+}
+.menu{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: transform .5s;
+ 
+}
+.menu-line{
+  width: 100%;
+  height: 5px;
+  background-color: khaki;
+  transform-origin: right;
+  transition: all .5s .5s;
+}
+
+.checkbox:checked ~.navbar-navigation .navbar-navigation-left{
+  left: 0;
+}
+.checkbox:checked ~.navbar-navigation .navbar-navigation-right{
+  right: 0;
+}
+.checkbox:checked ~.hamburger-menu .menu{
+  transform: rotateZ(90deg);
+}
+.checkbox:checked ~.hamburger-menu .menu-line-1{
+  transform: rotateZ(-40deg);
+}
+.checkbox:checked ~.hamburger-menu .menu-line-2{
+  opacity: 0;
+}
+.checkbox:checked ~.hamburger-menu .menu-line-3{
+  transform: rotateZ(40deg);
+}
+ 
+/*--------------------------------------------------------------- */
+/* ============================================================ */
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /* ================ MQ ======================================= */
+  @media(max-width: 1023px) {
+      
+    .ola{
+      display: none;
+    }
+  }
+
+
+
+@media (max-width: 769px){
+  .box{
+    
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 769px){
+  .left{
+    margin-top: 30%;
+  }
+  .photo{
+    width: 40%;
+    border-radius: 97% 3% 100% 0% / 17% 80% 20% 83% ;
+    margin:5% 25%;
+  }
+  .right{
+    width: 80%;
+    font-size: 25px;
+    margin-left: 10%;
+  }
+}
+
+
+@media (max-width: 769px){
+  
+}
+
